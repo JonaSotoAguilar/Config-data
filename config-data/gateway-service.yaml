@@ -30,10 +30,10 @@ spring:
           uri: lb://proveedor-service
           predicates:
             - Path=/proveedor/**
-        - id: acopio_grasa_st-service
-          uri: lb://acopio_grasa_st-service
+        - id: grasa-service
+          uri: lb://grasa-service
           predicates:
-            - Path=/acopio_grasa_st/**
+            - Path=/grasa_st/**
         - id: leche-service
           uri: lb://leche-service
           predicates:
@@ -41,4 +41,4 @@ spring:
         - id: pago-service
           uri: lb://pago-service
           predicates:
-            - Path=/acopio_quincena/**
+            - Path=/pago/**
