@@ -37,7 +37,7 @@ spring:
         - id: leche-service
           uri: lb://leche-service
           predicates:
-            - Path=/acopio_leche/**
+            - Path=/leche/**
         - id: pagos-service
           uri: lb://pagos-service
           predicates:
