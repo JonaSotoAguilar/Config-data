@@ -34,11 +34,11 @@ spring:
           uri: lb://acopio_grasa_st-service
           predicates:
             - Path=/acopio_grasa_st/**
-        - id: acopio_leche-service
-          uri: lb://acopio_leche-service
+        - id: leche-service
+          uri: lb://leche-service
           predicates:
             - Path=/acopio_leche/**
-        - id: pagos-service
-          uri: lb://pagos-service
+        - id: pago-service
+          uri: lb://pago-service
           predicates:
             - Path=/acopio_quincena/**
