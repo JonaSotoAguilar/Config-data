@@ -33,7 +33,7 @@ spring:
         - id: grasa-service
           uri: lb://grasa-service
           predicates:
-            - Path=/grasa_st/**
+            - Path=/grasa/**
         - id: leche-service
           uri: lb://leche-service
           predicates:
