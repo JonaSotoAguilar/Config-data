@@ -16,12 +16,6 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     metadataMap:
-      prometheus.scrape: true
-
-spring:
-  cors:
-    allowed-origins: "http://localhost:8080"
-    allowed-methods: "*"
-    allowed-headers: "*"
-    allow-credentials: true
-
+      "prometheus.scrape": "true"
+      "prometheus.path": "/actuator/prometheus"
+      "prometheus.port": "8080"
