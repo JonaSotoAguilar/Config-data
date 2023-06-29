@@ -17,3 +17,11 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     metadataMap:
       prometheus.scrape: true
+
+spring:
+  cors:
+    allowed-origins: "*"
+    allowed-methods: "*"
+    allowed-headers: "*"
+    allow-credentials: true
+
