@@ -1,5 +1,12 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 eureka:
   client:
     fetch-registry: true
@@ -10,5 +17,3 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     metadataMap:
       prometheus.scrape: true
-      prometheus.path: /actuator/prometheus
-      prometheus.port: 8080
