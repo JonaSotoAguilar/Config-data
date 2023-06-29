@@ -9,8 +9,6 @@ eureka:
       default-zone: http://localhost:8761/eureka
   instance:
     hostname: localhost
-    metadata-map:
-      prometheus.scrape: "true"
 
 spring:
   cloud:
@@ -44,9 +42,3 @@ spring:
           uri: lb://pago-service
           predicates:
             - Path=/pago/**
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
