@@ -44,6 +44,7 @@ spring:
           uri: lb://pago-service
           predicates:
             - Path=/pago/**
+
 management:
   endpoints:
     web:
