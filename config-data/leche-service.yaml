@@ -9,11 +9,10 @@ management:
 
 eureka:
   client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      default-zone: http://localhost:8761/eureka
-  instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    metadataMap:
-      prometheus.path: /actuator/prometheus
+    fetch-registry: false
+    register-with-eureka: false
+    service-url: 
+      default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      
+instance:
+  prefer-ip-address: true
