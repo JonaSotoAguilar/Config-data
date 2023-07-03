@@ -1,12 +1,13 @@
 server:
   port: 8761
-  
+
 eureka:
   client:
-    fetch-registry: false
-    register-with-eureka: false
-    service-url: 
-      default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
-      
-instance:
-  prefer-ip-address: true
+    serviceUrl:
+      defaultZone: "http://${eureka-host:eureka-service.prod}:${eureka-port:8761}/eureka/"
+  instance:
+    metadata-map:
+      prometheusURI: "/actuator/prometheus"
+
+# Metrics related configurations
+management.endpoints.web.exposure.include: health,info,prometheus
